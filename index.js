@@ -1,10 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import FloatingButton from './FloatingButton';
+const React = require('react');
+const ReactDOM = require('react-dom');
+const FloatingButton = require('./FloatingButton');
 
 ReactDOM.render(
-  <React.StrictMode>
-    <FloatingButton />
-  </React.StrictMode>,
-  document.getElementById('floating-button-root') // Cambiar el ID del elemento donde se renderiza el componente
+  React.createElement(React.StrictMode, null, React.createElement(FloatingButton, null)),
+  document.getElementById('root')
 );
